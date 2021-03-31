@@ -1,0 +1,145 @@
+.header {
+  position: relative;
+  &.expand {
+    .header__nav-toggle {
+      .menu {
+        width: 25px;
+        height: 25px;
+        background-image: url('../img/icons/close.svg');
+      }
+    }
+  }
+  &.header_index {
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+.notice {
+  display: inline-block;
+  background-color: $btn_bg_color;
+  border-radius: 100px;
+  color: $body_bg_color;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 8px 6px;
+  line-height: 1;
+  text-align: center;
+  &:hover {
+    background-color: $btn_hover_bg_color;
+  }
+  @media (min-width: 992px) {
+    font-size: 20px;
+    padding: 4px 10px 7px;
+  }
+  &.notice_login {
+    @media (min-width: 1200px) {
+      font-size: 20px;
+      padding: 4px 10px 7px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 36px;
+      padding: 7px 18px 12px;
+    }
+  }
+}
+
+.body_bg {
+  &.light1 {
+    background-color: $bg_light_1;
+  }
+  &.light2 {
+    background-color: $bg_light_2;
+  }
+}
+
+.header_page {
+  margin-bottom: 21px;
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.header_page-null {
+  margin: 0;
+}
+
+.header_page-list {
+  margin-bottom: 0;
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: 992px) {
+    margin-bottom: 100px;
+  }
+  @media (min-width: 1920px) {
+    margin-bottom: 100px;
+  }
+}
+
+.header__row {
+  padding: 28px 0 26px;
+  @media (min-width: 992px) {
+    padding: 84px 0 50px;
+  }
+  .header__row-inline {
+    position: relative;
+  }
+}
+
+.header__nav-toggle {
+  .menu {
+    display: block;
+    width: 17px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-image: url('../img/icons/bell.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    position: relative;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  .notice {
+    position: absolute;
+    top: 7px;
+  }
+}
+
+.header-menu {
+  display: none;
+}
+.header-menu__wrap {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.header-menu__item {
+  padding: 10px 0 20px;
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 30px;
+  color: $font_color;
+  text-decoration: none;
+  line-height: 1;
+  &:hover {
+    text-decoration: none;
+    color: $font_color;
+    .notice {
+      background-color: $btn_hover_bg_color;
+    }
+  }
+  .notice {
+    margin-bottom: 8px;
+  }
+}
+.header-menu__item-text {
+  word-break: break-all;
+  line-height: 1;
+}
+
+
+
