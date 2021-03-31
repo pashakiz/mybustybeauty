@@ -1,0 +1,42 @@
+/* font-family: "Biotif"; */
+
+@font-face {
+    font-family: "Biotif"; /*Light*/
+    src: url("../fonts/Biotif/Biotif-Light.eot");
+    src: url("../fonts/Biotif/Biotif-Light.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Biotif/Biotif-Light.woff") format("woff"),
+    url("../fonts/Biotif/Biotif-Light.ttf") format("truetype"),
+    url("../fonts/Biotif/Biotif-Light.svg#Biotif-Light") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Biotif"; /*Regular*/
+    src: url("../fonts/Biotif/Biotif-Regular.eot");
+    src: url("../fonts/Biotif/Biotif-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Biotif/Biotif-Regular.woff") format("woff"),
+    url("../fonts/Biotif/Biotif-Regular.ttf") format("truetype"),
+    url("../fonts/Biotif/Biotif-Regular.svg#Biotif-Regular") format("svg");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Biotif"; /*SemiBold*/
+    src: url("../fonts/Biotif/Biotif-Medium.eot");
+    src: url("../fonts/Biotif/Biotif-Medium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Biotif/Biotif-Medium.woff") format("woff"),
+    url("../fonts/Biotif/Biotif-Medium.ttf") format("truetype"),
+    url("../fonts/Biotif/Biotif-Medium.svg#Biotif-Medium") format("svg");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Biotif"; /*SemiBold*/
+    src: url("../fonts/Biotif/Biotif-Bold.eot");
+    src: url("../fonts/Biotif/Biotif-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Biotif/Biotif-Bold.woff") format("woff"),
+    url("../fonts/Biotif/Biotif-Bold.ttf") format("truetype"),
+    url("../fonts/Biotif/Biotif-Bold.svg#Biotif-Bold") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
