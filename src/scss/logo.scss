@@ -77,21 +77,3 @@
     }
   }
 }
-
-.logo_footer {
-  .logo__img {
-    width: 21px;
-    height: 31px;
-    @media (min-width: 992px) {
-      width: 27px;
-      height: 40px;
-      margin: 0 16px 0 0;
-    }
-  }
-  .logo__txt {
-    @media (min-width: 992px) {
-      font-size: 23px;
-      line-height: 32px;
-    }
-  }
-}

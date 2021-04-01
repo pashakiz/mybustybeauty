@@ -2,16 +2,29 @@
   position: relative;
   &.expand {
     .header__nav-toggle {
-      .menu {
-        width: 25px;
-        height: 25px;
-        background-image: url('../img/icons/close.svg');
-      }
+      .menu {}
+    }
+    .header-menu {
+      display: block;
     }
   }
   &.header_index {
     @media (min-width: 1200px) {
       display: none;
+    }
+  }
+}
+
+.body_bg {
+  .header {
+    background-image: url('../img/bg/bg-header.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 80%;
+  }
+  &.body_bg-index {
+    .header {
+      background: $body_bg_color;
     }
   }
 }
@@ -42,15 +55,6 @@
       font-size: 36px;
       padding: 7px 18px 12px;
     }
-  }
-}
-
-.body_bg {
-  &.light1 {
-    background-color: $bg_light_1;
-  }
-  &.light2 {
-    background-color: $bg_light_2;
   }
 }
 
@@ -89,21 +93,7 @@
 }
 
 .header__nav-toggle {
-  .menu {
-    display: block;
-    width: 17px;
-    height: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    background-image: url('../img/icons/bell.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 100%;
-    position: relative;
-    &:hover {
-      opacity: 0.75;
-    }
-  }
+  .menu {}
   .notice {
     position: absolute;
     top: 7px;

@@ -8,31 +8,10 @@ body {
   @media (min-width: 768px) {
     font-size: $font_size;
   }
-  &.body_bg {}
-  &.body_bg-index {
-    @media (min-width: 1200px) {
-      background: url('../img/bg/bg-text-index.svg') 50% -2% no-repeat $body_bg_color;
-      background-size: 40%;
-    }
+  &.body_bg {
+    background-color: $bg_light_1;
   }
-  &.body_bg-search {
-    @media (min-width: 1200px) {
-      background: url('../img/bg/bg-text-searching.svg') 50% -2% no-repeat $body_bg_color;
-      background-size: 40%;
-    }
-  }
-  &.body_bg-login {
-    @media (min-width: 1200px) {
-      background: url('../img/bg/bg-text-login.svg') 50% -2% no-repeat $body_bg_color;
-      background-size: 40%;
-    }
-  }
-  &.body_bg-signup {
-    @media (min-width: 1200px) {
-      background: url('../img/bg/bg-text-signup.svg') 50% -2% no-repeat $body_bg_color;
-      background-size: 40%;
-    }
-  }
+  &.body_bg-index {}
 }
 
 .container {

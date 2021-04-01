@@ -18,17 +18,15 @@ $(function() {
 
         //mobile menu expand
         $('.header').on('click', '.header__nav-toggle', function(){
-            if (window.innerWidth < 992) {
-                let header_menu = $(this).closest('.header').find('.header-menu');
-                if ( $('.header').hasClass('expand') ) {
-                    header_menu.slideUp(300);
-                    setTimeout(function() {
-                        $('.header').removeClass('expand');
-                    }, 300);
-                } else {
-                    header_menu.slideDown(300);
-                    $('.header').addClass('expand');
-                }
+            let header_menu = $(this).closest('.header').find('.header-menu');
+            if ( $('.header').hasClass('expand') ) {
+                header_menu.slideUp(300);
+                setTimeout(function() {
+                    $('.header').removeClass('expand');
+                }, 300);
+            } else {
+                header_menu.slideDown(300);
+                $('.header').addClass('expand');
             }
         });
 
