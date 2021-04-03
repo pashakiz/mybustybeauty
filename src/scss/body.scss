@@ -28,7 +28,7 @@ body {
       padding-top: 120px;
     }
     @media (min-width: 1500px) {
-      max-width: 1338px + $grid-gutter-width;
+      max-width: 1292px + $grid-gutter-width;
     }
   }
   &.container_profile {
@@ -37,13 +37,24 @@ body {
     }
     .container__inner {
       @media (min-width: 1200px) {
-        padding: 0 11px;
+        padding: 0 55px;
       }
     }
   }
   &.container_narrow {
-    @media (min-width: 992px) {
-      max-width: 868px;
+    @media (min-width: 1200px) {
+      max-width: 966px + $grid-gutter-width;
+    }
+  }
+  &.container_text {
+    @media (min-width: 1200px) {
+      padding-top: 29px;
+      max-width: 828px + $grid-gutter-width;
+    }
+  }
+  &.container_footer {
+    @media (min-width: 1534px) {
+      max-width: 1504px + $grid-gutter-width;
     }
   }
 }
