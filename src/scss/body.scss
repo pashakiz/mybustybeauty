@@ -46,6 +46,11 @@ body {
       max-width: 966px + $grid-gutter-width;
     }
   }
+  &.container_swithers {
+  @media (min-width: 768px) {
+    max-width: 572px + $grid-gutter-width;
+  }
+  }
   &.container_text {
     @media (min-width: 1200px) {
       padding-top: 29px;
