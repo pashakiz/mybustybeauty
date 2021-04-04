@@ -473,6 +473,7 @@ textarea.form-control {
       border: $switch_border;
       border-radius: $switch_bg_border_radius;
       background-color: $switch_bg_color;
+      cursor: pointer;
     }
     &::after {
       content: $switch_dot_txt_0;
@@ -490,6 +491,7 @@ textarea.form-control {
       border-radius: $switch_dot_border_radius;
       background-color: $switch_dot_color;
       border: $switch_dot_border;
+      cursor: pointer;
     }
     @media (min-width: 768px) {
       font-size: $switch_label_fontsize;
