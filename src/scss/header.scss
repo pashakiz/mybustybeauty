@@ -70,6 +70,52 @@
   }
 }
 
+.body_header-mob-bg {
+  .header {
+    position: relative;
+    background-color: $body_bg_color;
+    margin-bottom: 0;
+    @media (min-width: 1200px) {
+      background-color: transparent;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 30px;
+      background-image: url('../img/bg/bg-header-mob.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: 100%;
+      position: absolute;
+      bottom: -29px;
+      z-index: 10;
+      @media (min-width: 1200px) {
+        content: none;
+        display: none;
+      }
+    }
+    .header__row {
+      padding: 8px 0 0;
+      @media (min-width: 1200px) {
+        padding: 60px 0 52px;
+      }
+    }
+    .logo {
+      top: 10px;
+      z-index: 20;
+      @media (min-width: 1200px) {
+        top: 0;
+      }
+    }
+    .header-menu__wrap {
+      padding: 45px 0 15px;
+      @media (min-width: 1200px) {
+        padding: 15px 0;
+      }
+    }
+  }
+}
+
 .notice {
   display: inline-block;
   background-color: $btn_bg_color;
