@@ -36,17 +36,10 @@ $(function() {
             $('.profile-photo').css('background-image', 'url(' + imageUrl + ')');
         });
 
-        //gallery on desktop
-        $('.user-profile-gallery').on('click', '.user-profile-gallery__item', function(){
-            let url = $(this).css('background-image');
-            url = url.replace('url(','').replace(')','').replace(/\"/gi, '');
-            $('.user-profile-photo').css('background-image', 'url(' + url + ')');
-        });
-
         //slider (Profile gallery) for mobile
         $('.owl-carousel.user-profile-slider').owlCarousel({
             items: 1,
-            dots: true
+            dots: false
         });
 
         //slider for SignUp/Login pages

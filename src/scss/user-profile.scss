@@ -1,33 +1,46 @@
 .user-profile-slider-wrap {
   width: 100%;
   position: relative;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   @media (min-width: 400px) {
     width: 320px;
     max-width: 320px;
   }
   @media (min-width: 768px) {
-    width: 540px;
-    max-width: 540px;
-    margin-bottom: 45px;
+    width: 470px;
+    max-width: 470px;
   }
-  @media (min-width: 992px) {
-    margin-bottom: 60px;
+  @media (min-width: 992px) {}
+  &::after {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-image: url('../img/bg/bg-ava-bottom2.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
+    position: absolute;
+    bottom: -2px;
+    z-index: 2;
+    @media (min-width: 1200px) {
+      content: none;
+      display: none;
+    }
   }
 }
 .user-profile-slider {
   width: 100%;
-  height: 506px;
+  height: 472px;
   position: relative;
   border-radius: 0;
   overflow: hidden;
   @media (min-width: 400px) {
-    height: 506px;
-    max-height: 506px;
+    height: 472px;
+    max-height: 472px;
   }
   @media (min-width: 768px) {
-    height: 854px;
-    max-height: 854px;
+    height: 693px;
+    max-height: 693px;
   }
   .slide {
     width: 100%;
@@ -97,54 +110,85 @@
 .userprofile__img {
   width: 100%;
   @media (min-width: 1200px) {
-    width: 401px;
-    min-width: 401px;
-    max-width: 401px;
-    height: 544px;
+    width: 483px;
+    min-width: 483px;
+    max-width: 483px;
+    height: 483px;
+    border-radius: 100%;
     background-image: url('../img/photos/ava.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100%;
     position: relative;
-    margin: 0 102px 0 64px;
+    margin: 0 63px 0 0;
   }
 }
 .userprofile__btn {
-  display: none;
-  @media (min-width: 1200px) {
-    display: block;
-    padding: 35px 10px 30px;
-  }
+  position: absolute;
+  bottom: -25px;
 }
 .userprofile__info {
+  @media (min-width: 400px) {
+    width: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    width: 470px;
+    max-width: 470px;
+  }
   @media (min-width: 1200px) {
+    margin: 0;
     color: $font_color;
   }
 }
-.userprofile__row {
-  margin-bottom: 39px;
-  text-align: center;
-  color: $font_color2;
+.userprofile__infobg {
+  margin: 0 -15px;
+  background-color: $bg_light_1;
+  padding: 45px 15px 63px;
+  position: relative;
+  @media (min-width: 400px) {
+    margin: 0;
+  }
   @media (min-width: 1200px) {
+    padding: 70px 0 0;
+    background-color: transparent;
+  }
+  &::after {
+    content: '';
+    width: calc(100% + 2px);
+    height: 50px;
+    background-image: url('../img/bg/bg-footer-mob.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 24px 15px 22px;
-    color: #fff;
-    margin-bottom: 0;
-    background-color: rgba(0,0,0, 0.8);
-    //filter: blur(6px);
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    @media (min-width: 1200px) {
+      content: none;
+      display: none;
+    }
+  }
+}
+.userprofile__row {
+  text-align: center;
+  color: $body_bg_color;
+  margin-bottom: 29px;
+  @media (min-width: 1200px) {
+    margin-bottom: 42px;
   }
 }
 .userprofile__name {
   font-family: $font_family2;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 24px;
   line-height: 1;
-  margin-bottom: 13px;
+  margin: 0 0 7px 0;
   @media (min-width: 1200px) {
-    font-size: 29px;
-    margin-bottom: 14px;
+    font-size: 36px;
+    margin: 0 28px 0 0;
   }
 }
 .userprofile__loc {
@@ -153,7 +197,7 @@
   font-size: 16px;
   line-height: 1;
   @media (min-width: 1200px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 .userprofile__title {
@@ -179,89 +223,59 @@
   margin: 0 15px 0;
   width: calc(100% - 30px);
   position: absolute;
-  bottom: 26px;
-  z-index: 1;
+  bottom: -12px;
+  z-index: 5;
 }
-.user-profile-btn {
-  padding: 21px 7px 20px;
-}
-
-.user-profile-gallery {
-  display: none;
-  @media (min-width: 1200px) {
-    width: 107px;
-    min-width: 107px;
-    max-width: 107px;
-    height: 544px;
-    display: block;
-    overflow: hidden;
-    transform: scale(1);
-    cursor: grab;
-    &.active {
-      transform: scale(1.05);
-      cursor: grabbing;
-    }
-  }
-  .user-profile-gallery__item {
-    width: 100%;
-    height: 101px;
-    //cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 100%;
-    margin-bottom: 28px;
-  }
-}
+.user-profile-btn {}
 
 .compatibility {
   &.compatibility_mb {
     padding-bottom: 0;
     @media (min-width: 1200px) {
-      padding-bottom: 41px;
+      padding-bottom: 51px;
     }
   }
   .compatibility__chart {
     +.compatibility__chart {
-      margin-left: 14px;
+      margin-left: 30px;
       @media (min-width: 576px) {
-        margin-left: 45px;
+        margin-left: 35px;
       }
       @media (min-width: $user_list_item_breakpoint) {
-        margin-left: 25px;
+        margin-left: 35px;
       }
     }
   }
   .compatibility__progress {
-    width: 77px;
-    height: 21px;
-    &.compatibility__progress_svgup {
-      svg {
-        position: relative;
-        top: -3px;
-      }
-    }
+    width: 70px;
+    height: 18px;
     @media (min-width: $user_list_item_breakpoint) {
-      width: 95px;
-      height: 26px;
-      &.compatibility__progress_svgup {
-        svg {
-          position: relative;
-          top: -4px;
-        }
+      width: 110px;
+      height: 28px;
+    }
+    &.progress {
+      border-radius: 100px;
+      border: 2px solid $body_bg_color;
+      background-color: $body_bg_color;
+      @media (min-width: $user_list_item_breakpoint) {
+        border: 3px solid $body_bg_color;
+      }
+      .progress-bar {
+        border-radius: 100px;
+        background-color: $btn_bg_color;
       }
     }
   }
   .compatibility__title {
     font-family: $font_family;
-    color: $font_color2;
+    color: $body_bg_color;
     font-weight: 400;
-    font-size: 15px;
-    margin-top: 7px;
+    font-size: 14px;
+    margin-top: 15px;
     text-transform: uppercase;
     @media (min-width: $user_list_item_breakpoint) {
-      color: $font_color2;
-      font-size: 18px;
-      margin-top: 9px;
+      font-size: 22px;
+      margin-top: 29px;
     }
   }
 
@@ -281,21 +295,10 @@
     .compatibility__progress {
       width: 36px;
       height: 10px;
-      &.compatibility__progress_svgup {
-        svg {
-          position: relative;
-          top: -12px;
-        }
-      }
+
       @media (min-width: $user_list_item_breakpoint) {
         width: 77px;
         height: 21px;
-        &.compatibility__progress_svgup {
-          svg {
-            position: relative;
-            top: -6px;
-          }
-        }
       }
     }
     .compatibility__chart {
@@ -312,12 +315,13 @@
 .user-profile-title {
   font-family: $font_family2;
   color: $font_color;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   @media (min-width: 1200px) {
-    font-size: 36px;
-    margin-bottom: 40px;
+    color: $body_bg_color;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -330,16 +334,16 @@
   @media (min-width: 1200px) {
     font-size: 18px;
     p {
-      color: $font_color;
-      line-height: 40px;
+      color: $body_bg_color;
+      line-height: 35px;
     }
   }
   .user-profile-about__title {
     line-height: 41px;
-    margin: 40px 0 35px;
+    margin: 43px 0 34px;
     @media (min-width: 1200px) {
-      margin: 50px 0 39px;
-      line-height: 50px;
+      margin: 0 0 20px;
+      line-height: 41px;
     }
   }
 }

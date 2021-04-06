@@ -55,7 +55,7 @@
     content: '';
     width: calc(100% + 2px);
     height: 30px;
-    background-image: url('../img/bg/bg-ava-bottom.svg');
+    background-image: url('../img/bg/bg-ava-bottom1.svg');
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100%;
@@ -63,6 +63,10 @@
     bottom: -1px;
     left: -1px;
     right: -1px;
+    @media (min-width: 1200px) {
+      content: none;
+      display: none;
+    }
   }
   @media (min-width: 400px) {
     height: 506px;

@@ -10,6 +10,12 @@ body {
   }
   &.body_bg {
     background-color: $bg_light_1;
+    &.body_bg-mob {
+      background: $body_bg_color;
+      @media (min-width: 1200px) {
+        background-color: $bg_light_1;
+      }
+    }
   }
   &.body_bg-index {}
 }
