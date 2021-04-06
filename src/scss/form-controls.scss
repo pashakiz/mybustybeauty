@@ -27,13 +27,12 @@ body textarea:required:valid {
   border: $input_border;
   background-color: $input_bg;
   border-radius: $input_border_radius;
-  padding: 15px 30px 16px;
+  padding: 15px 24px 14px;
   color: $input_txt_color;
   font-family: $input_txt_family;
   font-size: $input_txt_xs_size;
   line-height: $input_txt_xs_lh;
   font-weight: 400;
-  text-transform: uppercase;
   &:hover {
     background-color: $input_hover_bg;
     color: $input_hover_txt_color;
@@ -49,7 +48,7 @@ body textarea:required:valid {
     opacity: 0.7;
   }
   @media (min-width: 992px) {
-    padding: 16px 30px;
+    padding: 25px 41px;
     font-size: $input_txt_size;
     line-height: $input_txt_lh;
   }
@@ -94,12 +93,13 @@ input.form-control {
   }
 }
 textarea.form-control {
-  border-radius: $textarea_border_radius;
+  border-radius: $textarea_border_radius_mob;
   min-height: 159px;
   @media (min-width: 768px) {
     height: 168px;
   }
   @media (min-width: 1200px) {
+    border-radius: $textarea_border_radius;
     height: 159px;
   }
   @media (min-width: 1500px) {
@@ -164,35 +164,30 @@ textarea.form-control {
   }
 }
 .form-group_input {
-  margin-bottom: 23px;
+  margin-bottom: 17px;
   @media (min-width: 1200px) {
-    margin-bottom: 42px;
+    margin-bottom: 35px;
   }
   @media (min-width: 1500px) {
-    margin-bottom: 54px;
+    margin-bottom: 35px;
   }
 }
 .form-group_input2 {
-  margin-bottom: 23px;
+  margin-bottom: 17px;
   @media (min-width: 1200px) {
     margin-bottom: 0;
   }
-  &.pr10px {
-    @media (min-width: 1500px) {
-      padding-right: 10px;
-    }
-  }
 }
 .form-group_check1 {
-  margin: 35px 0 32px;
+  margin: 30px 0 27px;
   @media (min-width: 1200px) {
     margin: 0;
   }
 }
 .form-group_check {
-  margin: 40px 0;
-  @media (min-width: 1500px) {
-    margin: 50px 0;
+  margin: 32px 0 30px;
+  @media (min-width: 1200px) {
+    margin: 47px 0 48px;
   }
 }
 .form-group_settings-btn {
@@ -350,9 +345,9 @@ textarea.form-control {
     &.custom-control-inline {
       margin-right: 0;
       + .custom-control-inline {
-        margin-left: 55px;
+        margin-left: 33px;
         @media (min-width: 1200px) {
-          margin-left: 59px;
+          margin-left: 50px;
         }
       }
     }
@@ -596,10 +591,13 @@ textarea.form-control {
       @media (min-width: 768px) {
         padding: 0 0 0 $switch_bg_width + $switch_margin_right;
       }
+      @media (min-width: 1500px) {
+        padding: 0 18px 0 $switch_bg_width + $switch_margin_right;
+      }
     }
     .custom-control-label {
-      font-size: 18px;
-      line-height: 25px;
+      font-size: 16px;
+      line-height: 33px;
       font-weight: 400;
       &::before {
         left: - $switch_bg_width_mob - $switch_margin_right_mob;
@@ -608,19 +606,21 @@ textarea.form-control {
       }
       &::after {
         top: calc(0.25rem - 5px);
-        left: - $switch_bg_width_mob - $switch_margin_right_mob - 5px;
+        left: - $switch_bg_width_mob - $switch_margin_right_mob - 0px;
         margin-left: 0;
+        line-height: $switch_label_lineheight_mob;
       }
       @media (min-width: 768px) {
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 50px;
         &::before {
           top: calc(0.25rem + 3px);
           left: - $switch_bg_width - $switch_margin_right;
         }
         &::after {
           top: calc(0.25rem - 2px);
-          left: - $switch_bg_width - $switch_margin_right - 5px;
+          left: - $switch_bg_width - $switch_margin_right - 0px;
+          line-height: $switch_label_lineheight;
         }
       }
     }
@@ -629,14 +629,14 @@ textarea.form-control {
         ~ .custom-control-label {
           &::after {
             top: calc(0.25rem - 5px);
-            left: - $switch_bg_width_mob - $switch_margin_right_mob - 5px;
-            transform: translateX(23px);
+            left: - $switch_bg_width_mob - $switch_margin_right_mob - 0px;
+            //transform: translateX(23px);
           }
           @media (min-width: 768px) {
             &::after {
               top: calc(0.25rem - 2px);
               left: - $switch_bg_width - $switch_margin_right - 0px;
-              transform: translateX(23px);
+              //transform: translateX(23px);
             }
           }
         }
@@ -653,10 +653,7 @@ textarea.form-control {
     width: 290px;
   }
   @media (min-width: 1200px) {
-    width: 250px;
-  }
-  @media (min-width: 1500px) {
-    width: 302px;
+    width: 325px;
   }
   .custom-file-input {
     width: 100%;
@@ -767,24 +764,48 @@ textarea.form-control {
   }
   &.btn_3 { //change photo
     width: 290px;
-    height: 52px;
-    padding: 14px 15px;
-    border-radius: 0;
-    background-color: rgba(220,89,150, 0.79);
+    height: 48px;
+    padding: 16px 15px 13px;
+    border-radius: 100px;
+    background-color: rgba($btn_bg_color, 0.6);
     border: none;
     &:hover {
-      color: $body_bg_color;
-      background-color: $btn_bg_color_hover;
+      background-color: rgba($btn_bg_before_color_hover, 0.6);
+    }
+    &::after {
+      content: none;
+      display: none;
     }
     @media (min-width: 992px) {
-      font-size: 21px;
-      padding: 20px 20px;
-      width: 302px;
-      height: 69px;
+      font-size: 15px;
+      padding: 16px 15px 13px;
+      width: 290px;
+      height: 48px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 22px;
+      padding: 24px 20px 23px;
+      width: 325px;
+      height: 76px;
     }
   }
   &.btn_w100 {
     width: 100%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .col-xxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-xxl-set1 {
+    flex: 0 0 538px;
+    max-width: 538px;
+  }
+  .col-xxl-set2 {
+    flex: 0 0 753px;
+    max-width: 753px;
   }
 }
 
