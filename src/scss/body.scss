@@ -22,6 +22,11 @@ body {
 
 .container {
   &.container_index {
+    @media (min-width: 1200px) {
+      padding: 0 11px;
+    }
+  }
+  &.container_userlist {
     @media (min-width: 1500px) {
       max-width: $container-xxl + $grid-gutter-width;
     }

@@ -53,13 +53,7 @@
   position: relative;
   &::after {
     content: '';
-    width: calc(100% + 2px);
-    height: 30px;
-    background-image: url('../img/bg/bg-ava-bottom1.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 100%;
-    position: absolute;
+    @include wave(calc(100% + 2px), 30px, '../img/bg/bg-ava-bottom1.svg', 50%);
     bottom: -1px;
     left: -1px;
     right: -1px;

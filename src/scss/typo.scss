@@ -71,9 +71,14 @@ h2 {
     margin-bottom: 137px;
   }
   &.h2_list {
-    margin: 0 0 46px 0;
+    margin: 0;
     @media (min-width: 992px) {
-      margin: 16px 0 98px 0;
+      font-size: 70px;
+      line-height: 80px;
+      margin: 0;
+    }
+    @media (min-width: 1534px) {
+      display: none;
     }
   }
 }

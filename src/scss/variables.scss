@@ -1,5 +1,5 @@
-$container-xxl:             1110px;
-$container-xxxl:            1110px;
+$container-xxl:             1364px;
+$container-xxxl:            1364px;
 $body_bg_color:             #A374D1;
 $logo_main_color:           #FF92FF;
 $btn_bg_color:              #FF92FF;
@@ -178,4 +178,14 @@ $switch_label_lineheight_mob: 29px;
 //User List page wider
 $user_list_wider:           160px;
 $user_list_item_breakpoint: 992px;
-$user_list_title_color:     $font_color;
+$user_list_title_color:     $font_color2;
+
+@mixin wave($width, $height, $background-image, $background-position) {
+  width: $width;
+  height: $height;
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+  background-position: $background-position;
+  background-size: 100%;
+  position: absolute;
+}
