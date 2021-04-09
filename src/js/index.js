@@ -63,43 +63,60 @@ $(function() {
         // });
 
         //custom sliders
-        owlInit('.login-slider');
+        owlInitFor('.login-slider', 0,1200);
+        owlInitFor('.user-profile-photo', 1, 1200);
 
     });
 
     //init owl carousel for custom screen width
-    function owlInit(el_class) {
-        if (window.innerWidth < 1200) {
-            $(el_class).addClass('owl-carousel');
-            $('.owl-carousel' + el_class).owlCarousel({
-                loop: true,
-                dots: false,
-                items: 2,
-                margin: 11,
-                autoWidth: true,
-                responsive:{
-                    768:{
-                        margin: 11
-                    },
-                    992:{
-                        margin: 11
-                    },
-                    1200:{
-                        margin: 50
-                    },
-                    1500:{
-                        margin: 96
-                    },
-                }
-            });
+    function owlInitFor(el_class, compare, breakpoint) {
+        if (compare) {
+            if (window.innerWidth > breakpoint) {
+                owlInit(el_class);
+            } else {
+                owlDestroy(el_class);
+            }
         } else {
-            $('.owl-carousel' + el_class).owlCarousel('destroy');
-            $(el_class).removeClass('owl-carousel');
+            if (window.innerWidth < breakpoint) {
+                owlInit(el_class);
+            } else {
+                owlDestroy(el_class);
+            }
         }
     }
 
+    function owlInit(el_class) {
+        $(el_class).addClass('owl-carousel');
+        $('.owl-carousel' + el_class).owlCarousel({
+            loop: true,
+            dots: false,
+            items: 1,
+            margin: 11,
+            autoWidth: true,
+            responsive:{
+                768:{
+                    margin: 11
+                },
+                992:{
+                    margin: 11
+                },
+                1200:{
+                    margin: 50
+                },
+                1500:{
+                    margin: 96
+                },
+            }
+        });
+    }
+    function owlDestroy(el_class) {
+        $('.owl-carousel' + el_class).owlCarousel('destroy');
+        $(el_class).removeClass('owl-carousel');
+    }
+
     $(window).resize(function() {
-        owlInit('.login-slider');
+        owlInitFor('.login-slider', 0,1200);
+        owlInitFor('.user-profile-photo', 1, 1200);
     });
 
 });
