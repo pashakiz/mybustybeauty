@@ -31,6 +31,14 @@ body {
       max-width: $container-xxl + $grid-gutter-width;
     }
     @media (min-width: 1920px) {
+      max-width: $container-xxl + $grid-gutter-width;
+    }
+  }
+  &.container_index-text {
+    @media (min-width: 1500px) {
+      max-width: $container-xxl + $grid-gutter-width;
+    }
+    @media (min-width: 1920px) {
       max-width: $container-xxxl + $grid-gutter-width;
     }
   }

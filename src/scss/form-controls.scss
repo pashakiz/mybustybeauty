@@ -716,21 +716,17 @@ textarea.form-control {
     padding: 27px 15px 28px;
   }
   &.btn_1 { //index
-    width: 290px;
-    height: 66px;
-    line-height: 1;
-    padding: 12px 7px 15px;
     @media (min-width: 768px) {
       width: 100%;
       max-width: 382px;
-      height: 84px;
-      padding: 20px 10px 25px;
     }
     @media (min-width: 992px) {
       width: 100%;
       max-width: 382px;
-      height: 84px;
-      padding: 20px 10px 25px;
+    }
+    @media (min-width: 1200px) {
+      width: 430px;
+      max-width: 430px;
     }
   }
   &.btn_2 { //user list
