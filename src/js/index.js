@@ -10,9 +10,9 @@ $(function() {
 
         //preloader
         setTimeout(function() {
-            let preloader = $('#page-preloader');
-            if ( !preloader.hasClass('done') ) {
-                preloader.addClass('done');
+            let preloader = document.body.querySelector('#page-preloader');
+            if ( !preloader.classList.contains('done') ) {
+                preloader.classList.add('done');
             }
         }, 1000);
 
