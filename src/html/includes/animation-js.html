@@ -1,8 +1,6 @@
 <script>
     let searchTime = 5000; // time for search women (5 sec)
     const progressSpeed1 = 40; // speed for 1st progress bar
-    const progressSpeed2 = 15; // speed for 2nd progress bar
-    const progressSpeed3 = 30; // speed for 3th progress bar
     document.addEventListener('DOMContentLoaded', initPage);
 
     function initPage() {
@@ -26,24 +24,22 @@
     }
 
     function showAreaIndex() {
+        document.body.classList.add('body_bg');
         document.body.classList.add('body_bg-index');
-        document.querySelector('.header').classList.add('header_index');
         document.querySelector('.display.display_01').style.display = 'block';
     }
     function hideAreaIndex() {
-        document.body.classList.remove('body_bg-index');
-        document.querySelector('.header').classList.remove('header_index');
         document.querySelector('.display.display_01').style.display = 'none';
     }
 
     function showAreaProgressBars() {
-        document.body.classList.add('body_bg-search');
         document.querySelector('.display.display_02').style.display = 'block';
-        document.querySelector('.display.display_02').scrollIntoView({block: 'center', behavior: 'smooth'});
+        //document.querySelector('.display.display_02').scrollIntoView({block: 'center', behavior: 'smooth'});
         loading();
     }
     function hideAreaProgressBars() {
-        document.body.classList.remove('body_bg-search');
+        document.body.classList.remove('body_bg');
+        document.body.classList.remove('body_bg-index');
         document.querySelector('.display.display_02').style.display = 'none';
     }
 
@@ -53,12 +49,12 @@
     }
 
     function showAreaLogin() {
+        document.body.classList.add('body_bg-login');
         let area = document.querySelector('.display.display_03');
-        document.body.classList.add('body_bg-signup');
         area.style.display = 'block';
-        area.classList.add('animation');
+        //area.classList.add('animation');
         //animateAreaLogin(area);
-        setTimeout(animateAreaLogin, 100, area);
+        //setTimeout(animateAreaLogin, 100, area);
     }
 
     function loading() {
